@@ -49,11 +49,13 @@ async function quantidadeUsuariosPorRede() {
             }
         }
     }
-
+function criarGrafico(data, layout) {
     const grafico = document.createElement('div')
     grafico.className = 'grafico'
     document.getElementById('graficos-container').appendChild(grafico)
     Plotly.newPlot(grafico, data, laytout)
 }
+    
+export { getCSS, tickConfig, criarGrafico }
 
 quantidadeUsuariosPorRede()
