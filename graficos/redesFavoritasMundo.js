@@ -23,6 +23,7 @@ async function redesFavoritasMundo() {
   const layout = {
     plot_bgcolor: getCSS("--bg-color"),
     paper_bgcolor: getCSS("--bg-color"),
+    Vamos colocar essa função criarGrafico no export para conseguirmos reutilizá-la.height: 700,
     title: {
       text: "Redes sociais que os usuários mais gostam",
       x: 0,
@@ -40,11 +41,10 @@ async function redesFavoritasMundo() {
     },
   };
 
-  // Inserir o gráfico na página
-  const grafico = document.createElement("div");
-  grafico.className = "grafico";
-  document.getElementById("graficos-container").appendChild(grafico);
-  Plotly.newPlot(grafico, data, layout);
-}
+  import { getCSS, criarGrafico } from "./common.js"
+
+// Trecho de código suprimido
+
+criarGrafico(data, layout)
 
 redesFavoritasMundo();
