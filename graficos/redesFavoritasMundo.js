@@ -1,4 +1,5 @@
 import { getCSS } from "./common.js";
+import { getCSS, criarGrafico } from "./common.js";
 
 async function redesFavoritasMundo() {
   const url =
@@ -41,9 +42,8 @@ async function redesFavoritasMundo() {
     },
   };
 
-  import { getCSS, criarGrafico } from "./common.js"
 
-// Trecho de código suprimido
+
 
 criarGrafico(data, layout)
 
