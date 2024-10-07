@@ -42,7 +42,16 @@ async function redesFavoritasMundo() {
     },
   };
 
-
+function criarGrafico(data, layout) {
+    const grafico = document.createElement('div');
+    grafico.className = 'grafico';
+    document.getElementById('graficos-container').appendChild(grafico);
+    const config = {
+        responsive: true,
+        displayModeBar: false
+    }
+    Plotly.newPlot(grafico, data, layout, config);
+}
 
 
 criarGrafico(data, layout)
